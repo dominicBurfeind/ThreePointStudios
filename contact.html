@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Autor" content="Dominic Burfeind">
+  <meta name="Erstellungsdatum" content="16.04.2024">
+  <link rel="stylesheet" href="resources/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <title>Agenturname - Unsere Projekte</title>
+</head>
+<body>
+
+  <div class="background-container">
+    <p class="background-text1 wavy">Agenturname</p>
+    <p class="background-text2 wavy">Agenturname</p>  
+  </div> 
+
+
+  <main class="main-info">
+  
+    <!--Banner-->
+    <div class="banner">
+      <div class="banner-content ">
+        <p id="Datum"></p>
+      </div>
+    </div>
+
+    <!--Content-->
+    <section class="main-content-info">
+      <header class="header">
+        <div class="header-content-info">
+          <ul>
+            <li class="typingSmall"><a href="index.html">Home</a></li>
+            <li class="typingSmall"><a href="work.html">Projekte</a></li>
+            <li class="typingSmall"><a href="aboutus.html">Über uns</a></li>
+            <li class="typingSmall"><a id="Currently-open" href="#">Kontakt</a></li>
+          </ul>
+          <div class="logo-container">
+            <span class="logo logo-info">Agenturname</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="contact-us">
+        <div class="contact-us-content">
+          <h1>Nehmen sie Kontakt mit uns auf</h1>
+          <form action="index.html" method="post">
+            <label for="lastname">Name:</label><br>
+            <input type="text" id="lastname" name="lastname" required><br><br>
+            <label for="firstname">Vorname:</label><br>
+            <input type="text" id="firstname" name="firstname" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="comments">Kommentare:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+            <input type="submit" id="Submit" value="Submit">
+          </form>
+        </div>
+      </section>
+    </section>
+  </main>
+  <script src="resources/js/script.js"></script>
+</body>
+</html>
