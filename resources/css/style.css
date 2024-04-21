@@ -589,11 +589,12 @@ main {
   
   .project-showcase-content img {
     width: 100%;
-    min-height: 230px;
+    min-height: 210px;
   }
 
   .logo {
-    font-size: 55px;
+    font-size: 50px;
+    width: 100%;
   }
 
   .verfuegbar-container {
