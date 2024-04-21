@@ -25,43 +25,26 @@
     <!--Banner-->
     <div class="banner">
       <div class="banner-content ">
-        <p id="Datum"></p>
+        <div class="skill-container">
+          <p id="Skills"> <span></span> SEO   <span></span> Webdesign   <span></span> UI/UX Design   <span></span> E-Commerce Design </p>
+        </div>
       </div>
     </div>
+
+  
 
     <!--Content-->
     <section class="main-content">
       <header class="header">
         <div class="header-content">
           <ul>
-            <li class="typingSmall"><a href="work.html">Projekte</a></li>
-            <li class="typingSmall"><a href="aboutus.html">Über uns</a></li>
-            <li class="typingSmall"><a href="contact.html">Kontakt</a></li>
+            <li><a href="work.html">Projekte</a></li>
+            <li><a href="aboutus.html">Über uns</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
           </ul>
-          <div class="project-showcase">
-            <p>Unsere Projekte</p>
-            <div class="project-showcase-content fade">
-              <img src="resources/img/massoe1.jpg" alt="Website die von unserer Agentur erstellt wurde.">
-              <div class="text"><a href="">MASSÖ</a></div>
-            </div>
-            <div class="project-showcase-content fade ">
-              <img src="resources/img/tastyBites2.jpg" alt="Website die von unserer Agentur erstellt wurde.">
-              <div class="text"><a href="">TASTY BITES</a></div>
-            </div>
-            <div class="project-showcase-content fade ">
-              <img src="resources/img/wissen1.jpg" alt="Website die von unserer Agentur erstellt wurde.">
-              <div class="text"><a href="">WI$$EN</a></div>
-            </div>
-            <div class="project-showcase-content fade">
-              <img src="resources/img/harmonyhaven1.jpg" alt="Website die von unserer Agentur erstellt wurde.">
-              <div class="text"><a href="">HARMONY HAVEN</a></div>
-            </div>
-            <div class="project-showcase-content fade">
-              <img src="resources/img/lumina1.jpg" alt="Website die von unserer Agentur erstellt wurde.">
-              <div class="text"><a href="">LUMINA CREATIVE AGENCY</a></div>
-            </div>
-               <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-               <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <div class="homepage-about-us">
+            <h1>Über <span class="logo-color">Uns</span></h1>
+            <p>Willkommen bei Agenturname, Ihrem zuverlässigen Partner für Webdesign und -entwicklung! Wir sind ein leidenschaftliches Team von kreativen Köpfen, das sich darauf konzentriert, Ihre Online-Präsenz zu optimieren und Ihr digitales Potenzial zu maximieren.</p>
           </div>
           <br>
         </div>
@@ -69,18 +52,75 @@
 
       <!--Logo-->
       <div class="logo-container">
-        <span class="logo typing">Agenturname</span>
+        <span class="logo typing">Agentur<span class="logo-color">name</span></span>
       </div>
 
       <!--Footer-->
       <footer class="footer">
         <div class="footer-content">
-          <div class="skill-container">
-            <p id="Skills"> <span></span> SEO   <span></span> Webdesign   <span></span> UI/UX Design   <span></span> E-Commerce Design </p>
+          <div class="schnellkontakt-container">
+            <div class="schnellkontakt-content">
+              <h2>Schnellkontakt</h2>
+              <p>Nehmen sie Kontakt zu uns auf</p>
+              <form action="index.html" method="post">
+                <label for="lastname">Name:</label><br>
+                <input type="text" id="lastname" name="lastname" required><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <input type="submit" id="Submit" value="Submit">
+              </form>
+            </div>
+           
           </div>
           <div class="verfuegbar-container">
             <h2>Verfügbarkeit</h2>
-            <p class="typingSmall">Wir stehen ihnen den ganzen Monat zur verfügung</p>
+            <p>Wir stehen ihnen den ganzen Monat zur verfügung</p>
+            <div class="calender-container">
+              <table id="calendar"></table>
+              <script>
+                function generateCalendar() {
+                    var today = new Date();
+                    var year = today.getFullYear();
+                    var month = today.getMonth();
+                    var firstDay = new Date(year, month, 1).getDay();
+                    var daysInMonth = new Date(year, month + 1, 0).getDate();
+        
+                    var calendarHTML = "<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr><tr>";
+        
+                    // Add empty cells for days before the first day of the month
+                    for (var i = 0; i < firstDay; i++) {
+                        calendarHTML += "<td></td>";
+                    }
+        
+                    // Fill in the days of the month
+                    for (var i = 1; i <= daysInMonth; i++) {
+                        var date = new Date(year, month, i);
+                        var dayOfWeek = date.getDay();
+                        calendarHTML += "<td>" + i + "</td>";
+                        
+                        // Start a new row if it's Saturday
+                        if (dayOfWeek === 6 && i !== daysInMonth) {
+                            calendarHTML += "</tr><tr>";
+                        }
+                    }
+        
+                    // Fill in remaining empty cells if necessary
+                    if (new Date(year, month, daysInMonth).getDay() !== 6) {
+                        var remainingDays = 6 - new Date(year, month, daysInMonth).getDay();
+                        for (var i = 0; i < remainingDays; i++) {
+                            calendarHTML += "<td></td>";
+                        }
+                    }
+        
+                    calendarHTML += "</tr>";
+        
+                    document.getElementById("calendar").innerHTML = calendarHTML;
+                }
+        
+                // Initially generate calendar for the current month
+                generateCalendar();
+            </script>
+            </div>
           </div>
         </div>
       </footer>
