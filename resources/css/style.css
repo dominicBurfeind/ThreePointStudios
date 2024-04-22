@@ -257,7 +257,7 @@ main {
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
-  margin: 80px 0 30px 0px;
+  margin: 80px 0 20px 0px;
   font-family: Abel;
 }
 
@@ -268,7 +268,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 280px;
+  width: 200px;
   border: 1.25px solid black;
 }
 
@@ -292,29 +292,22 @@ main {
   padding: var(--spacing-xs);
 }
 
-.schnellkontakt-container form {
-  padding: var(--spacing-xs);
-  margin: var(--spacing-sm);
-}
 
 .schnellkontakt-container form label {
-  font-weight: 400;
   font-size: var(--font-xs);
 }
 
 .schnellkontakt-container form input {
-  border: none;
-  width: 200px;
-  padding: 2.5px;
+  border: 1px solid white;
   background-color: #eee;
+
 }
 
 .schnellkontakt-container input[type="submit"] {
   background-color: #525487;
   color: white;
-  padding: 6px 3px;
+  padding: 3px 3px;
   border: none;
-  margin-bottom: 2px;
   border-radius: 4px;
   cursor: pointer;
   width: 100%;
@@ -333,14 +326,14 @@ main {
 
 .calender-container table {
   border-collapse: collapse;
-  margin: 20px 0;
+  margin: 7px 0;
   background-color: #80808046;
 }
 .calender-container th, .calender-container td {
   border: 1px solid black;
   padding: 2px;
   text-align: center;
-  font-size: var(--font-small);
+  font-size: var(--font-xs);
 }
 
 /*Extra pages*/
@@ -664,6 +657,10 @@ font-family: Abel;
     height: 30px;
     width: 50%;
     margin: 0 auto;
+  }
+
+  .unsere-werte-container ul li {
+    width: 60%;
   }
 
   .question details summary {
