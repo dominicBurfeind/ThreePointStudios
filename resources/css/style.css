@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Bebas neue', Abel, Helvetica, Arial;
-  background: linear-gradient(to right,#191b57 ,#525487, #282b8a, #525487, #191b57 );
+  background: linear-gradient(to right,#191b57 ,#878ae8, #282b8a, #878ae8, #191b57 );
   color: #222;
   height: 100%;
   width: 100%;
@@ -58,7 +58,7 @@ li {
 }
 
 main {
-  background: linear-gradient(to bottom, #ffffffd7, #d7d7d7cc);
+  background: linear-gradient(to bottom, #ffffffc1, #d7d7d7cc);
   border-radius: var(--radius);
   width: 75%;
   margin: var(--spacing-lg);
@@ -158,7 +158,7 @@ main {
 .skill-container span  {
   height: 7px;
   width: 7px;
-  background-color: #525487;
+  background-color: #878ae8;
   border-radius: 50%;
   margin: 0 10px 0 30px ;
 }
@@ -209,7 +209,7 @@ main {
 }
 
 #Currently-open {
-  color: #525487;
+  color: #878ae8;
 }
 
 .homepage-about-us {
@@ -245,7 +245,7 @@ main {
 }
 
 .logo-color {
-  color: #525487;
+  color: #878ae8;
 }
 
 
@@ -304,7 +304,7 @@ main {
 }
 
 .schnellkontakt-container input[type="submit"] {
-  background-color: #525487;
+  background-color: #878ae8;
   color: white;
   padding: 3px 3px;
   border: none;
@@ -505,6 +505,12 @@ main {
   font-size: var(--font-xxxl);
   text-align: center;
 }
+
+.contact-us-content p {
+  text-align: center;
+  margin: var(--spacing-md);
+}
+
 .contact-us-content label {
 font-family: Abel;
 }
@@ -544,6 +550,11 @@ font-family: Abel;
 
 .contact-us-content form  {
   margin-top: 30px;
+}
+
+.contact-us-content h2 {
+  margin: 60px 0 10px 0;
+  text-align: center;
 }
 
 
@@ -635,14 +646,18 @@ font-family: Abel;
   }
 
   .logo {
-    font-size: 10vw;
+    font-size: 11vw;
     width: 100%;
+    margin-top: 30px;
   }
 
-  .verfuegbar-container {
+  .verfuegbar-container,
+  .schnellkontakt-container {
     text-align: center;
-    margin: 20px auto;
+    margin: 0 auto;
+    margin-bottom: 40px;
   }
+
 
   .footer-content {
     display: flex;
